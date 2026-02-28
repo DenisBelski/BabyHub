@@ -1,0 +1,17 @@
+D:\IT\GitHub_Projects\BabyHub\BabyHub.Application.Contracts\bin\Debug\net6.0\BabyHub.Application.Contracts.deps.json
+D:\IT\GitHub_Projects\BabyHub\BabyHub.Application.Contracts\bin\Debug\net6.0\BabyHub.Application.Contracts.dll
+D:\IT\GitHub_Projects\BabyHub\BabyHub.Application.Contracts\bin\Debug\net6.0\BabyHub.Application.Contracts.pdb
+D:\IT\GitHub_Projects\BabyHub\BabyHub.Application.Contracts\bin\Debug\net6.0\BabyHub.Application.Contracts.xml
+D:\IT\GitHub_Projects\BabyHub\BabyHub.Application.Contracts\bin\Debug\net6.0\BabyHub.Domain.Shared.dll
+D:\IT\GitHub_Projects\BabyHub\BabyHub.Application.Contracts\bin\Debug\net6.0\BabyHub.Domain.Shared.pdb
+D:\IT\GitHub_Projects\BabyHub\BabyHub.Application.Contracts\obj\Debug\net6.0\BabyHub.Application.Contracts.csproj.AssemblyReference.cache
+D:\IT\GitHub_Projects\BabyHub\BabyHub.Application.Contracts\obj\Debug\net6.0\BabyHub.Application.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+D:\IT\GitHub_Projects\BabyHub\BabyHub.Application.Contracts\obj\Debug\net6.0\BabyHub.Application.Contracts.AssemblyInfoInputs.cache
+D:\IT\GitHub_Projects\BabyHub\BabyHub.Application.Contracts\obj\Debug\net6.0\BabyHub.Application.Contracts.AssemblyInfo.cs
+D:\IT\GitHub_Projects\BabyHub\BabyHub.Application.Contracts\obj\Debug\net6.0\BabyHub.Application.Contracts.csproj.CoreCompileInputs.cache
+D:\IT\GitHub_Projects\BabyHub\BabyHub.Application.Contracts\obj\Debug\net6.0\BabyHub.Application.Contracts.csproj.CopyComplete
+D:\IT\GitHub_Projects\BabyHub\BabyHub.Application.Contracts\obj\Debug\net6.0\BabyHub.Application.Contracts.dll
+D:\IT\GitHub_Projects\BabyHub\BabyHub.Application.Contracts\obj\Debug\net6.0\refint\BabyHub.Application.Contracts.dll
+D:\IT\GitHub_Projects\BabyHub\BabyHub.Application.Contracts\obj\Debug\net6.0\BabyHub.Application.Contracts.xml
+D:\IT\GitHub_Projects\BabyHub\BabyHub.Application.Contracts\obj\Debug\net6.0\BabyHub.Application.Contracts.pdb
+D:\IT\GitHub_Projects\BabyHub\BabyHub.Application.Contracts\obj\Debug\net6.0\ref\BabyHub.Application.Contracts.dll

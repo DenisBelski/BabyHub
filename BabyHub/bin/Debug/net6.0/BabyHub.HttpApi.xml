@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BabyHub.HttpApi</name>
+    </assembly>
+    <members>
+        <member name="T:BabyHub.HttpApi.Controllers.Patients.PatientsController">
+            <summary>
+            Provides CRUD operations for patients.
+            </summary>
+        </member>
+        <member name="M:BabyHub.HttpApi.Controllers.Patients.PatientsController.CreateAsync(BabyHub.Application.Contracts.Patients.PatientCreateDto,FluentValidation.IValidator{BabyHub.Application.Contracts.Patients.PatientCreateDto})">
+            <summary>
+            Creates a new patient.
+            </summary>
+            <param name="input">Patient creation data.</param>
+            <returns>Identifier of the created patient.</returns>
+            <response code="201">Patient successfully created.</response>
+            <response code="400">Invalid input data.</response>
+        </member>
+        <member name="M:BabyHub.HttpApi.Controllers.Patients.PatientsController.UpdateAsync(System.Guid,BabyHub.Application.Contracts.Patients.PatientUpdateDto,FluentValidation.IValidator{BabyHub.Application.Contracts.Patients.PatientUpdateDto})">
+            <summary>
+            Updates an existing patient (full replacement).
+            All fields are overwritten with the provided values.
+            Nullable fields set to null will be cleared.
+            </summary>
+            <param name="id">Patient identifier.</param>
+            <param name="input">Complete patient data to replace the existing record.</param>
+            <response code="204">Patient successfully updated.</response>
+            <response code="400">Invalid input data.</response>
+            <response code="404">Patient not found.</response>
+        </member>
+        <member name="M:BabyHub.HttpApi.Controllers.Patients.PatientsController.DeleteAsync(System.Guid)">
+            <summary>
+            Deletes a patient.
+            </summary>
+            <param name="id">Patient identifier.</param>
+            <response code="204">Patient successfully deleted.</response>
+            <response code="404">Patient not found.</response>
+        </member>
+        <member name="M:BabyHub.HttpApi.Controllers.Patients.PatientsController.GetAsync(System.Guid)">
+            <summary>
+            Gets a patient by identifier.
+            </summary>
+            <param name="id">Patient identifier.</param>
+            <returns>Patient data.</returns>
+            <response code="200">Patient found.</response>
+            <response code="404">Patient not found.</response>
+        </member>
+        <member name="M:BabyHub.HttpApi.Controllers.Patients.PatientsController.GetListAsync(System.String,System.Nullable{System.Int32})">
+            <summary>
+            Gets a list of patients, optionally filtered by birth date.
+            Supports FHIR date search prefixes: eq, ne, gt, lt, ge, le, sa, eb, ap.
+            </summary>
+            <param name="birthDate">
+            Optional birth date filter in FHIR format, e.g. "eq2013-01-14", "ge2010-01-01T00:00:00".
+            If no prefix is specified, "eq" is assumed.
+            </param>
+            <param name="count">
+            Optional. Maximum number of patients to return.
+            Must be greater than 0. If not specified, all matching patients are returned.
+            </param>
+            <returns>List of patients matching the filter.</returns>
+            <response code="200">List returned successfully.</response>
+            <response code="400">Invalid birthDate format, unsupported operator, or invalid count value.</response>
+        </member>
+    </members>
+</doc>

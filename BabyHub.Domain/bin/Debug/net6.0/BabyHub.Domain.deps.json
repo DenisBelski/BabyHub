@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "BabyHub.Domain/1.0.0": {
+        "dependencies": {
+          "BabyHub.Domain.Shared": "1.0.0"
+        },
+        "runtime": {
+          "BabyHub.Domain.dll": {}
+        }
+      },
+      "BabyHub.Domain.Shared/1.0.0": {
+        "runtime": {
+          "BabyHub.Domain.Shared.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BabyHub.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BabyHub.Domain.Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

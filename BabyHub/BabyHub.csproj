@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.1.1" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.11.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BabyHub.Application\BabyHub.Application.csproj" />
+    <ProjectReference Include="..\BabyHub.EntityFrameworkCore\BabyHub.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\BabyHub.HttpApi\BabyHub.HttpApi.csproj" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.36" />
+  </ItemGroup>
+</Project>

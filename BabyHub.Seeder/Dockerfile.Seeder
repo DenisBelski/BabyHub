@@ -1,0 +1,17 @@
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+WORKDIR /src
+
+COPY ["BabyHub.Seeder/BabyHub.Seeder.csproj", "BabyHub.Seeder/"]
+COPY ["BabyHub.Application.Contracts/BabyHub.Application.Contracts.csproj", "BabyHub.Application.Contracts/"]
+COPY ["BabyHub.Domain.Shared/BabyHub.Domain.Shared.csproj", "BabyHub.Domain.Shared/"]
+
+RUN dotnet restore "BabyHub.Seeder/BabyHub.Seeder.csproj"
+
+COPY . .
+WORKDIR "/src/BabyHub.Seeder"
+RUN dotnet publish -c Release -o /app/publish
+
+FROM mcr.microsoft.com/dotnet/runtime:6.0
+WORKDIR /app
+COPY --from=build /app/publish .
+ENTRYPOINT ["dotnet", "BabyHub.Seeder.dll"]

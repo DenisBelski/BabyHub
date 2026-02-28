@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BabyHub.Application.Contracts</name>
+    </assembly>
+    <members>
+        <member name="T:BabyHub.Application.Contracts.Patients.PatientCreateDto">
+            <summary>Patient creation data.</summary>
+        </member>
+        <member name="P:BabyHub.Application.Contracts.Patients.PatientCreateDto.FamilyName">
+            <summary>Patient's family name.</summary>
+            <example>Ivanov</example>
+        </member>
+        <member name="P:BabyHub.Application.Contracts.Patients.PatientCreateDto.BirthDate">
+            <summary>
+            Patient's birth date and time.
+            Format: yyyy-MM-ddTHH:mm:ss. Timezone is not supported.
+            </summary>
+            <example>2024-01-13T18:25:43</example>
+        </member>
+        <member name="P:BabyHub.Application.Contracts.Patients.PatientCreateDto.IsActive">
+            <summary>Indicates whether the patient record is active.</summary>
+            <example>true</example>
+        </member>
+        <member name="P:BabyHub.Application.Contracts.Patients.PatientCreateDto.GivenNames">
+            <summary>List of given names.</summary>
+            <example>["Ivan", "Ivanovich"]</example>
+        </member>
+        <member name="P:BabyHub.Application.Contracts.Patients.PatientCreateDto.Use">
+            <summary>Name usage context.</summary>
+            <example>official</example>
+        </member>
+        <member name="P:BabyHub.Application.Contracts.Patients.PatientCreateDto.Gender">
+            <summary>Patient's gender.</summary>
+            <example>male</example>
+        </member>
+        <member name="T:BabyHub.Application.Contracts.Patients.PatientDto">
+            <summary>Represents a patient record.</summary>
+        </member>
+        <member name="P:BabyHub.Application.Contracts.Patients.PatientDto.Name">
+            <summary>Patient's name details.</summary>
+        </member>
+        <member name="P:BabyHub.Application.Contracts.Patients.PatientDto.Gender">
+            <summary>Patient's gender.</summary>
+            <example>male</example>
+        </member>
+        <member name="P:BabyHub.Application.Contracts.Patients.PatientDto.BirthDate">
+            <summary>Patient's birth date and time.</summary>
+            <example>2024-01-13T18:25:43</example>
+        </member>
+        <member name="P:BabyHub.Application.Contracts.Patients.PatientDto.Active">
+            <summary>Indicates whether the patient record is active.</summary>
+            <example>true</example>
+        </member>
+        <member name="T:BabyHub.Application.Contracts.Patients.PatientNameDto">
+            <summary>Represents a patient's name.</summary>
+        </member>
+        <member name="P:BabyHub.Application.Contracts.Patients.PatientNameDto.Id">
+            <summary>Unique identifier of the patient.</summary>
+            <example>d8ff176f-bd0a-4b8e-b329-871952e32e1f</example>
+        </member>
+        <member name="P:BabyHub.Application.Contracts.Patients.PatientNameDto.Use">
+            <summary>Name usage context.</summary>
+            <example>official</example>
+        </member>
+        <member name="P:BabyHub.Application.Contracts.Patients.PatientNameDto.Family">
+            <summary>Family name.</summary>
+            <example>Ivanov</example>
+        </member>
+        <member name="P:BabyHub.Application.Contracts.Patients.PatientNameDto.Given">
+            <summary>List of given names.</summary>
+            <example>["Ivan", "Ivanovich"]</example>
+        </member>
+        <member name="T:BabyHub.Application.Contracts.Patients.PatientUpdateDto">
+            <summary>Patient data to update.</summary>
+        </member>
+        <member name="P:BabyHub.Application.Contracts.Patients.PatientUpdateDto.FamilyName">
+            <summary>Patient's family name.</summary>
+            <example>Ivanov</example>
+        </member>
+        <member name="P:BabyHub.Application.Contracts.Patients.PatientUpdateDto.BirthDate">
+            <summary>
+            Patient's birth date and time.
+            Format: yyyy-MM-ddTHH:mm:ss. Timezone is not supported.
+            </summary>
+            <example>2024-01-13T18:25:43</example>
+        </member>
+        <member name="P:BabyHub.Application.Contracts.Patients.PatientUpdateDto.IsActive">
+            <summary>Indicates whether the patient record is active.</summary>
+            <example>true</example>
+        </member>
+        <member name="P:BabyHub.Application.Contracts.Patients.PatientUpdateDto.GivenNames">
+            <summary>
+            List of given names. Replaces existing values — pass empty array to clear.
+            </summary>
+            <example>["Ivan", "Ivanovich"]</example>
+        </member>
+        <member name="P:BabyHub.Application.Contracts.Patients.PatientUpdateDto.Use">
+            <summary>Name usage context.</summary>
+            <example>official</example>
+        </member>
+        <member name="P:BabyHub.Application.Contracts.Patients.PatientUpdateDto.Gender">
+            <summary>
+            Patient's gender. Required for update — replaces existing value.
+            </summary>
+            <example>male</example>
+        </member>
+    </members>
+</doc>

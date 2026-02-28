@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "aXiFs84YyOJtE0W5QntWEBy+tvYTy7BdBLuVH4/cnnIX7WEv/hvRbyzd2VAJXV+bcuEju29I3UDUYT0FuZkJ9g==",
+  "success": true,
+  "projectFilePath": "D:\\IT\\GitHub_Projects\\BabyHub\\BabyHub.Seeder\\BabyHub.Seeder.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Денис\\.nuget\\packages\\bogus\\34.0.2\\bogus.34.0.2.nupkg.sha512",
+    "C:\\Users\\Денис\\.nuget\\packages\\fluentvalidation\\11.6.0\\fluentvalidation.11.6.0.nupkg.sha512",
+    "C:\\Users\\Денис\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.2\\microsoft.extensions.dependencyinjection.6.0.2.nupkg.sha512",
+    "C:\\Users\\Денис\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\Денис\\.nuget\\packages\\microsoft.extensions.http\\6.0.1\\microsoft.extensions.http.6.0.1.nupkg.sha512",
+    "C:\\Users\\Денис\\.nuget\\packages\\microsoft.extensions.logging\\6.0.1\\microsoft.extensions.logging.6.0.1.nupkg.sha512",
+    "C:\\Users\\Денис\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.4\\microsoft.extensions.logging.abstractions.6.0.4.nupkg.sha512",
+    "C:\\Users\\Денис\\.nuget\\packages\\microsoft.extensions.options\\6.0.1\\microsoft.extensions.options.6.0.1.nupkg.sha512",
+    "C:\\Users\\Денис\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.1\\microsoft.extensions.primitives.6.0.1.nupkg.sha512",
+    "C:\\Users\\Денис\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.2\\system.diagnostics.diagnosticsource.6.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

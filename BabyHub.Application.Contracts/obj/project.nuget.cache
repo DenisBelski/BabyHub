@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "F0jTiv6QmnaBCmQ/ppfxNLJretYegMs3vcnd0eyrQWgthgt4O0wnzYNnGE+8FlktfCYehKjD9e0yQQcHamPqGA==",
+  "success": true,
+  "projectFilePath": "D:\\IT\\GitHub_Projects\\BabyHub\\BabyHub.Application.Contracts\\BabyHub.Application.Contracts.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Денис\\.nuget\\packages\\fluentvalidation\\11.6.0\\fluentvalidation.11.6.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,12 @@
+D:\IT\GitHub_Projects\BabyHub\BabyHub.Domain.Shared\bin\Debug\net6.0\BabyHub.Domain.Shared.deps.json
+D:\IT\GitHub_Projects\BabyHub\BabyHub.Domain.Shared\bin\Debug\net6.0\BabyHub.Domain.Shared.dll
+D:\IT\GitHub_Projects\BabyHub\BabyHub.Domain.Shared\bin\Debug\net6.0\BabyHub.Domain.Shared.pdb
+D:\IT\GitHub_Projects\BabyHub\BabyHub.Domain.Shared\obj\Debug\net6.0\BabyHub.Domain.Shared.csproj.AssemblyReference.cache
+D:\IT\GitHub_Projects\BabyHub\BabyHub.Domain.Shared\obj\Debug\net6.0\BabyHub.Domain.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\IT\GitHub_Projects\BabyHub\BabyHub.Domain.Shared\obj\Debug\net6.0\BabyHub.Domain.Shared.AssemblyInfoInputs.cache
+D:\IT\GitHub_Projects\BabyHub\BabyHub.Domain.Shared\obj\Debug\net6.0\BabyHub.Domain.Shared.AssemblyInfo.cs
+D:\IT\GitHub_Projects\BabyHub\BabyHub.Domain.Shared\obj\Debug\net6.0\BabyHub.Domain.Shared.csproj.CoreCompileInputs.cache
+D:\IT\GitHub_Projects\BabyHub\BabyHub.Domain.Shared\obj\Debug\net6.0\BabyHub.Domain.Shared.dll
+D:\IT\GitHub_Projects\BabyHub\BabyHub.Domain.Shared\obj\Debug\net6.0\refint\BabyHub.Domain.Shared.dll
+D:\IT\GitHub_Projects\BabyHub\BabyHub.Domain.Shared\obj\Debug\net6.0\BabyHub.Domain.Shared.pdb
+D:\IT\GitHub_Projects\BabyHub\BabyHub.Domain.Shared\obj\Debug\net6.0\ref\BabyHub.Domain.Shared.dll
