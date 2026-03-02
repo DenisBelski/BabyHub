@@ -28,3 +28,4 @@ D:\IT\GitHub_Projects\BabyHub\BabyHub.Seeder\obj\Debug\net6.0\refint\BabyHub.See
 D:\IT\GitHub_Projects\BabyHub\BabyHub.Seeder\obj\Debug\net6.0\BabyHub.Seeder.pdb
 D:\IT\GitHub_Projects\BabyHub\BabyHub.Seeder\obj\Debug\net6.0\BabyHub.Seeder.genruntimeconfig.cache
 D:\IT\GitHub_Projects\BabyHub\BabyHub.Seeder\obj\Debug\net6.0\ref\BabyHub.Seeder.dll
+D:\IT\GitHub_Projects\BabyHub\BabyHub.Seeder\bin\Debug\net6.0\BabyHub.Application.Contracts.xml

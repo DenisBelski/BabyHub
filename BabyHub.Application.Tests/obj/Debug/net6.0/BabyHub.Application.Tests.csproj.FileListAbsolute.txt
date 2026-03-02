@@ -167,3 +167,4 @@ D:\IT\GitHub_Projects\BabyHub\BabyHub.Application.Tests\bin\Debug\net6.0\BabyHub
 D:\IT\GitHub_Projects\BabyHub\BabyHub.Application.Tests\bin\Debug\net6.0\BabyHub.Domain.Shared.pdb
 D:\IT\GitHub_Projects\BabyHub\BabyHub.Application.Tests\obj\Debug\net6.0\BabyHub.Application.Tests.csproj.CopyComplete
 D:\IT\GitHub_Projects\BabyHub\BabyHub.Application.Tests\obj\Debug\net6.0\BabyHub.Application.Tests.genruntimeconfig.cache
+D:\IT\GitHub_Projects\BabyHub\BabyHub.Application.Tests\bin\Debug\net6.0\BabyHub.Application.Contracts.xml

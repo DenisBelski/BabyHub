@@ -1,0 +1,324 @@
+{
+  "info": {
+    "name": "BabyHub API",
+    "description": "Collection for demonstrating BabyHub API methods including CRUD operations and FHIR-compliant date search.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:5000",
+      "type": "string"
+    },
+    {
+      "key": "patientId",
+      "value": "",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "CRUD",
+      "item": [
+        {
+          "name": "Create Patient",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "var json = pm.response.json();",
+                  "if (json && json.name && json.name.id) {",
+                  "    pm.collectionVariables.set('patientId', json.name.id);",
+                  "    console.log('Saved patientId: ' + json.name.id);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"familyName\": \"Ivanov\",\n  \"birthDate\": \"2024-03-15T08:30:00\",\n  \"isActive\": true,\n  \"givenNames\": [\"Ivan\", \"Ivanovich\"],\n  \"use\": \"official\",\n  \"gender\": \"male\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/patients",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "patients"]
+            },
+            "description": "Creates a new patient. The response `name.id` is automatically saved to the `patientId` collection variable for use in subsequent requests."
+          }
+        },
+        {
+          "name": "Get Patient by ID",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/patients/{{patientId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "patients", "{{patientId}}"]
+            },
+            "description": "Returns a single patient by ID. Uses the `patientId` variable saved after Create."
+          }
+        },
+        {
+          "name": "Update Patient",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"familyName\": \"Ivanov\",\n  \"birthDate\": \"2024-03-15T08:30:00\",\n  \"isActive\": false,\n  \"givenNames\": [\"Ivan\", \"Ivanovich\", \"Petrovich\"],\n  \"use\": \"official\",\n  \"gender\": \"male\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/patients/{{patientId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "patients", "{{patientId}}"]
+            },
+            "description": "Updates an existing patient by ID."
+          }
+        },
+        {
+          "name": "Delete Patient",
+          "request": {
+            "method": "DELETE",
+            "url": {
+              "raw": "{{baseUrl}}/api/patients/{{patientId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "patients", "{{patientId}}"]
+            },
+            "description": "Deletes a patient by ID."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Date Search (FHIR)",
+      "item": [
+        {
+          "name": "eq — Equal (born on date)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/patients?birthDate=eq2013-01-14",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "patients"],
+              "query": [
+                {
+                  "key": "birthDate",
+                  "value": "eq2013-01-14"
+                }
+              ]
+            },
+            "description": "Returns patients born on January 14, 2013 (entire day)."
+          }
+        },
+        {
+          "name": "ne — Not Equal (not born on date)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/patients?birthDate=ne2013-01-14",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "patients"],
+              "query": [
+                {
+                  "key": "birthDate",
+                  "value": "ne2013-01-14"
+                }
+              ]
+            },
+            "description": "Returns patients NOT born on January 14, 2013."
+          }
+        },
+        {
+          "name": "lt — Less Than (born before date)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/patients?birthDate=lt2013-01-14",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "patients"],
+              "query": [
+                {
+                  "key": "birthDate",
+                  "value": "lt2013-01-14"
+                }
+              ]
+            },
+            "description": "Returns patients born strictly before January 14, 2013."
+          }
+        },
+        {
+          "name": "gt — Greater Than (born after date)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/patients?birthDate=gt2013-01-14",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "patients"],
+              "query": [
+                {
+                  "key": "birthDate",
+                  "value": "gt2013-01-14"
+                }
+              ]
+            },
+            "description": "Returns patients born strictly after January 14, 2013."
+          }
+        },
+        {
+          "name": "le — Less or Equal (born on or before date)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/patients?birthDate=le2013-01-14",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "patients"],
+              "query": [
+                {
+                  "key": "birthDate",
+                  "value": "le2013-01-14"
+                }
+              ]
+            },
+            "description": "Returns patients born on or before January 14, 2013 (inclusive)."
+          }
+        },
+        {
+          "name": "ge — Greater or Equal (born on or after date)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/patients?birthDate=ge2013-01-14",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "patients"],
+              "query": [
+                {
+                  "key": "birthDate",
+                  "value": "ge2013-01-14"
+                }
+              ]
+            },
+            "description": "Returns patients born on or after January 14, 2013 (inclusive)."
+          }
+        },
+        {
+          "name": "sa — Starts After (strictly after end of date)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/patients?birthDate=sa2013-01-14",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "patients"],
+              "query": [
+                {
+                  "key": "birthDate",
+                  "value": "sa2013-01-14"
+                }
+              ]
+            },
+            "description": "Returns patients whose birthDate starts after the end of January 14, 2013 (i.e. from Jan 15 onwards)."
+          }
+        },
+        {
+          "name": "eb — Ends Before (strictly before start of date)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/patients?birthDate=eb2013-01-14",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "patients"],
+              "query": [
+                {
+                  "key": "birthDate",
+                  "value": "eb2013-01-14"
+                }
+              ]
+            },
+            "description": "Returns patients whose birthDate ends before the start of January 14, 2013 (i.e. up to Jan 13)."
+          }
+        },
+        {
+          "name": "ap — Approximate (same as eq for date)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/patients?birthDate=ap2013-01-14",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "patients"],
+              "query": [
+                {
+                  "key": "birthDate",
+                  "value": "ap2013-01-14"
+                }
+              ]
+            },
+            "description": "Approximate match — behaves like eq for date values."
+          }
+        },
+        {
+          "name": "eq with exact datetime",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/patients?birthDate=eq2013-01-14T10:00:00",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "patients"],
+              "query": [
+                {
+                  "key": "birthDate",
+                  "value": "eq2013-01-14T10:00:00"
+                }
+              ]
+            },
+            "description": "Exact datetime match — returns only patients with birthDate exactly equal to 2013-01-14T10:00:00."
+          }
+        },
+        {
+          "name": "No prefix — defaults to eq",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/patients?birthDate=2013-01-14",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "patients"],
+              "query": [
+                {
+                  "key": "birthDate",
+                  "value": "2013-01-14"
+                }
+              ]
+            },
+            "description": "No prefix defaults to eq — same result as eq2013-01-14."
+          }
+        },
+        {
+          "name": "No filter — return all patients",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/patients",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "patients"]
+            },
+            "description": "Returns all patients without any date filter."
+          }
+        }
+      ]
+    }
+  ]
+}

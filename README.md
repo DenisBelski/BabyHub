@@ -143,6 +143,31 @@ docker-compose down -v
 | `?birthDate=ap2013-01-14` | Approximately Jan 14, 2013 |
 
 
-
 Full FHIR date search specification: https://www.hl7.org/fhir/search.html#date
+
+
+
+
+## Postman Collection
+
+Import the collection file `BabyHub.postman_collection.json` located in the repository root.
+
+**Import steps:**
+1. Open Postman
+2. `File` → `Import` → select `BabyHub.postman_collection.json`
+
+**Base URL** is pre-configured as a collection variable:
+- Default value: `http://localhost:5000`
+- To change: click the collection → **Variables** tab → update `baseUrl`
+
+**Running CRUD requests:**
+
+Run in order — `Create Patient` automatically saves the patient ID to the `patientId` variable, which is used by all subsequent requests.
+
+1. `Create Patient` — creates a new patient
+2. `Get Patient by ID` — retrieves the created patient
+3. `Update Patient` — updates patient data
+4. `Delete Patient` — deletes the patient
+
+**Date search requests** demonstrate all 9 FHIR operators: `eq`, `ne`, `lt`, `gt`, `le`, `ge`, `sa`, `eb`, `ap`.
 
