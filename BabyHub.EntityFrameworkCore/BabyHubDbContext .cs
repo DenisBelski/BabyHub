@@ -1,8 +1,6 @@
 ﻿using BabyHub.Domain.Patients;
 using BabyHub.EntityFrameworkCore.Configurations;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
-using System.Reflection.Emit;
 
 namespace BabyHub.EntityFrameworkCore
 {

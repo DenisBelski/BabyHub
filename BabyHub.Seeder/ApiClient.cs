@@ -1,31 +1,28 @@
 ﻿using BabyHub.Application.Contracts.Patients;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Net.Http.Json;
-using System.Text;
-using System.Threading.Tasks;
 
-public class ApiClient
+namespace BabyHub.Seeder
 {
-    private readonly HttpClient _client;
-
-    public ApiClient(string baseUrl)
+    public class ApiClient
     {
-        _client = new HttpClient { BaseAddress = new Uri(baseUrl) };
-    }
+        private readonly HttpClient _client;
 
-    public async Task<(bool success, string message)> CreatePatientAsync(PatientCreateDto dto)
-    {
-        var response = await _client.PostAsJsonAsync("/api/patients", dto);
-        if (response.IsSuccessStatusCode)
+        public ApiClient(string baseUrl)
         {
-            var id = await response.Content.ReadFromJsonAsync<Guid>();
-            return (true, id.ToString());
+            _client = new HttpClient { BaseAddress = new Uri(baseUrl) };
         }
 
-        var error = await response.Content.ReadAsStringAsync();
-        return (false, error);
+        public async Task<(bool success, string message)> CreatePatientAsync(PatientCreateDto dto)
+        {
+            var response = await _client.PostAsJsonAsync("/api/patients", dto);
+            if (response.IsSuccessStatusCode)
+            {
+                var id = await response.Content.ReadFromJsonAsync<Guid>();
+                return (true, id.ToString());
+            }
+
+            var error = await response.Content.ReadAsStringAsync();
+            return (false, error);
+        }
     }
 }

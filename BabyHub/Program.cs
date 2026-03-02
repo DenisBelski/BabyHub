@@ -8,11 +8,9 @@ using Microsoft.EntityFrameworkCore;
 using Sot.ProductService;
 using System.Text.Json.Serialization;
 using System.Text.Json;
-using System.Reflection;
 using FluentValidation;
 using Microsoft.AspNetCore.Diagnostics;
 using BabyHub.Domain.Shared.Exceptions;
-using System.ComponentModel;
 using BabyHub.Utils;
 
 namespace BabyHub

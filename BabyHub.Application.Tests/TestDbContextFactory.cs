@@ -25,16 +25,17 @@ namespace BabyHub.Application.Tests
                 new Patient("Alice", new DateTime(2013, 1, 14, 0, 0, 0)),
                 new Patient("Bob", new DateTime(2013, 1, 14, 10, 0, 0)),
                 new Patient("Eve", new DateTime(2013, 1, 14, 12, 0, 0)),
+                new Patient("EndOfDay", new DateTime(2013, 1, 14, 23, 59, 59)),
                 new Patient("Dave", new DateTime(2013, 1, 13, 12, 0, 0)),
                 new Patient("Carol", new DateTime(2013, 1, 15, 0, 0, 0)),
-                new Patient("Frank", new DateTime(2013, 3, 14, 0, 0, 0)),
+                new Patient("CarolMid", new DateTime(2013, 1, 15, 10, 0, 0)),
                 new Patient("Henry", new DateTime(2013, 1, 21, 0, 0, 0)),
+                new Patient("Frank", new DateTime(2013, 3, 14, 0, 0, 0)),
+                new Patient("MidMarch", new DateTime(2013, 3, 14, 15, 0, 0)),
+                new Patient("EndMarch", new DateTime(2013, 3, 14, 23, 59, 59)),
                 new Patient("Grace", new DateTime(2013, 3, 15, 0, 0, 0)),
-                new Patient("Ivy", new DateTime(2015, 6, 15, 0, 0, 0)),
-                new Patient("EndOfDay", new DateTime(2013, 1, 14, 23, 59, 59)),
-                new Patient("MidMarch", new DateTime(2013, 3, 14, 15, 0, 0))
+                new Patient("Ivy", new DateTime(2015, 6, 15, 0, 0, 0))
             );
-
             context.SaveChanges();
         }
     }

@@ -2,15 +2,8 @@
 using BabyHub.Application.Contracts.Patients;
 using BabyHub.Application.Utils;
 using BabyHub.Domain.Patients;
-using BabyHub.Domain.Shared.Constants;
-using BabyHub.Domain.Shared.Enums;
 using BabyHub.Domain.Shared.Exceptions;
 using BabyHub.Domain.Shared.Patients;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BabyHub.Application.Patients
 {

@@ -1,16 +1,7 @@
 ﻿using BabyHub.Application.Contracts.Patients;
-using BabyHub.Domain.Shared.Constants;
-using BabyHub.Domain.Shared.Enums;
 using FluentValidation;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace BabyHub.HttpApi.Controllers.Patients
 {
